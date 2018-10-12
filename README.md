@@ -1,4 +1,4 @@
-# magic-images-dl
+# mtg-image-downloader
 This python program downloads the png images of all Magic: the Gathering cards from Scryfall. Very convenient to help with image recognition.
 
 **WARNING**: This will take up aprox 90 GB of data so be sure that you have enough space. The script will take a VERY long time to execute. Between an hour to 8 hours depending on download speed and number of threads used.
