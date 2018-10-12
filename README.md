@@ -8,7 +8,7 @@ This python program downloads the png images of all Magic: the Gathering cards f
 ### Format
 It will download png images and save them in the following format:
 
-`$output_dest/$card_name[$set]-[$card_num]/original.png`  
+`$output_dest/mtg_images/$card_name[$set]-[$card_num]/original.png`  
 
 As is, this script will not work with Windows due to how paths work. If interest is there, adjustments can be made (see future).
 
