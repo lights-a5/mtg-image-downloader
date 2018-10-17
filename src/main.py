@@ -33,7 +33,7 @@ class mtg_image_importer:
                 return
         self._create_folder('{0}/{1}_{2}_{3}'.format(self.output_dest, card_name, card_set, collector_num))
         with open('{0}/{1}_{2}_{3}/original.png'.format(self.output_dest, card_name, card_set, collector_num), 'wb+') as new_image:
-            print('Writing {0}[{1}]-{2}'.format(card_name, card_set, collector_num))
+            print('Writing {0}_{1}_{2}'.format(card_name, card_set, collector_num))
             for block in response.iter_content(1024):
                 if not block:
                     break
