@@ -68,8 +68,13 @@ class mtg_image_importer:
             card_name = card['name'].translate(trantab)
             if self._card_done(card_name, card):
                 return
-            response = self.get_image(card['image_uris']['png'])
-            self._write_image(card_name, card['set'], card['collector_number'], response)
+            try:
+                image_uri = self.get_image(card['image_uris']['png'])
+                response = self.get_image(image_uri)
+                self._write_image(card_name, card['set'], card['collector_number'], response)
+                
+            except KeyError:
+                print(card_name, ' has no image uri associated with it.')
 
     def _import_cards_threaded(self):
         with ThreadPoolExecutor(max_workers=self.threads) as executor:
